@@ -1,0 +1,185 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Body */
+body {
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header Section */
+header {
+  text-align: center;
+  padding: 40px 0;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #007bff;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 32px;
+  color: #222;
+}
+
+.tagline {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #000509;
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.resume-btn:hover {
+  background-color: #e61b08;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 25px 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: bold;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+nav a:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Sections */
+section {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+/* List Styles */
+ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+/* Soft Skills Section */
+#softskills ul {
+  list-style-type: circle;
+}
+
+#softskills li {
+  font-size: 18px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#softskills li:hover {
+  transform: translateX(10px);
+  color: #007bff;
+}
+
+/* Technical Skills Section */
+#skills li {
+  font-size: 17px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#skills li:hover {
+  transform: translateX(10px);
+  color: #007bff;
+}
+
+/* Mobile fallback: show hover effect always on touch devices */
+@media (max-width: 600px) {
+  #skills li,
+  #softskills li {
+    transform: translateX(10px);
+    color: #007bff;
+  }
+}
+
+/* Contact Links */
+#contact a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 0;
+  font-size: 14px;
+  color: #777;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .profile-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
+}
