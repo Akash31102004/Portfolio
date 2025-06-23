@@ -1,14 +1,14 @@
-/* Reset */
+/* Reset default styles */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", sans-serif;
 }
 
-/* Body Style */
+/* Body */
 body {
-  background-color: #f5f5f5;
+  background-color: #f4f4f4;
   color: #333;
   line-height: 1.6;
 }
@@ -16,88 +16,129 @@ body {
 /* Container */
 .container {
   width: 90%;
-  max-width: 900px;
-  margin: 30px auto;
+  max-width: 960px;
+  margin: auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Header */
+/* Header Section */
 header {
   text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #ccc;
+  padding: 40px 0;
 }
 
 h1 {
-  font-size: 28px;
-  margin: 10px 0;
+  font-size: 32px;
+  color: #222;
 }
 
 .tagline {
   font-size: 16px;
-  color: #777;
+  color: #666;
+  margin-top: 10px;
 }
 
 .resume-btn {
   display: inline-block;
-  margin-top: 12px;
+  margin-top: 15px;
   padding: 10px 20px;
-  background-color: #3498db;
+  background-color: #007bff;
   color: #fff;
-  text-decoration: none;
   border-radius: 8px;
-  transition: background-color 0.3s;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
 .resume-btn:hover {
-  background-color: #2980b9;
+  background-color: #0056b3;
 }
 
 /* Navigation */
 nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
   margin: 25px 0;
-  text-align: center;
 }
 
 nav a {
-  margin: 0 12px;
   text-decoration: none;
-  color: #3498db;
+  color: #007bff;
   font-weight: bold;
-  transition: color 0.3s;
+  padding: 8px 16px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
 }
 
 nav a:hover {
-  color: #1f618d;
+  background-color: #007bff;
+  color: white;
 }
 
-/* Section Headings */
+/* Sections */
 section {
-  margin: 30px 0;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
 }
 
-section h2 {
-  font-size: 22px;
-  color: #2c3e50;
-  margin-bottom: 10px;
+h2 {
+  color: #007bff;
+  margin-bottom: 15px;
 }
 
-/* Lists */
+/* List Styles */
 ul {
-  list-style: disc inside;
-  padding-left: 15px;
+  list-style-type: square;
+  padding-left: 20px;
 }
 
 li {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  color: #444;
 }
 
-/* Contact */
+/* Technical Skills Section */
+#skills li {
+  font-size: 17px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#skills li:hover {
+  transform: translateX(10px);
+  color: #007bff;
+}
+
+/* Soft Skills Section */
+#softskills ul {
+  list-style-type: circle;
+}
+
+#softskills li {
+  font-size: 18px;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+#softskills li:hover {
+  transform: translateX(10px);
+  color: #007bff;
+}
+
+/* Mobile fallback: show hover effect always */
+@media (max-width: 600px) {
+  #skills li,
+  #softskills li {
+    transform: translateX(10px);
+    color: #007bff;
+  }
+}
+
+/* Contact Links */
 #contact a {
-  color: #3498db;
+  color: #007bff;
   text-decoration: none;
 }
 
@@ -108,9 +149,23 @@ li {
 /* Footer */
 footer {
   text-align: center;
-  margin-top: 30px;
-  padding-top: 15px;
-  border-top: 1px solid #ccc;
-  color: #aaa;
+  padding: 20px 0;
   font-size: 14px;
+  color: #777;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav a {
+    width: 100%;
+    text-align: center;
+  }
 }
