@@ -1,4 +1,4 @@
-/* Reset default styles */
+/* Reset default styles */More actions
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +26,16 @@ header {
   text-align: center;
   padding: 40px 0;
 }
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 10px auto;
+}
+
 
 h1 {
   font-size: 32px;
